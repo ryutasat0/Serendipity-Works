@@ -31,7 +31,7 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="メニューを開閉" role="button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -55,10 +55,10 @@
     <!-- About セクション -->
     <section id="about" class="about">
         <div class="container">
-                            <div class="section-header">
-                    <h2>About</h2>
-                    <p>事業概要</p>
-                </div>
+            <div class="section-header">
+                <h2>About</h2>
+                <p>事業概要</p>
+            </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>私たちの想い</h3>
@@ -83,6 +83,43 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 追加ブロック：セレンディピティ -->
+            <div class="about-serendipity">
+                <h3>セレンディピティ（Serendipity）とは</h3>
+                <p class="about-serendipity__lead">
+                    セレンディピティとは、予期せぬ偶然から幸運な発見をすること。
+                    ペニシリンしかり、万有引力しかり、ポテトチップスしかり——
+                    単なる偶然に留めず、その偶然をビジネスシーンで生かしていきたいと考えています。
+                </p>
+
+                <div class="serendipity-gallery">
+                    <figure class="serendipity-item">
+                        <img
+                            src="https://charm-labo.com/wp-content/uploads/2025/08/240_F_220707743_3M1RF2vftfIKy5JAHfgFMd3KV2pekhWe.jpg"
+                            alt="ペニシリンの発見を象徴するイメージ"
+                            loading="lazy" decoding="async">
+                        <figcaption>ペニシリン</figcaption>
+                    </figure>
+
+                    <figure class="serendipity-item">
+                        <img
+                            src="https://charm-labo.com/wp-content/uploads/2025/08/240_F_162311751_TyeN9eB5dSZNxWpz3dlSrxoIWaFIJt7c.jpg"
+                            alt="ニュートンの万有引力の着想を象徴するリンゴのイメージ"
+                            loading="lazy" decoding="async">
+                        <figcaption>ニュートンの万有引力</figcaption>
+                    </figure>
+
+                    <figure class="serendipity-item">
+                        <img
+                            src="https://charm-labo.com/wp-content/uploads/2025/08/240_F_1495044332_r3UzmMBgBWugcmhmLyBMVRMo6l9lpPgI.jpg"
+                            alt="ポテトチップスの誕生を象徴するイメージ"
+                            loading="lazy" decoding="async">
+                        <figcaption>ポテトチップス</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- /追加ブロック -->
         </div>
     </section>
 
@@ -254,4 +291,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
