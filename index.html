@@ -1,36 +1,277 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>セレンディピティ</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ご遺骨からつくる宝石で、大切な人との絆を永遠に。一人ひとりに寄り添ったサービスを提供します。" />
+  <meta name="keywords" content="宝石, リヴナイト, ご遺骨, ジュエリー, 絆の証" />
+  <title>Serendipity-Works - ご遺骨からつくる宝石で、大切な人との絆を永遠に</title>
+
+  <!-- フォント / アイコン / CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>Serendipity-Works</h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#service" class="nav-link">Service</a></li>
+        <li class="nav-item"><a href="#philosophy" class="nav-link">Philosophy</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" aria-label="メニューを開閉" role="button">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-<!-- 追加：セレンディピティ（中央揃え・モダン・横並び） -->
-<div class="about-serendipity">
-    <h3>セレンディピティ（Serendipity）とは</h3>
-    <p class="about-serendipity__lead">
-        セレンディピティとは、予期せぬ偶然から幸運な発見をすること。ペニシリンしかり、万有引力しかり、ポテトチップスしかり——単なる偶然に留めず、その偶然をビジネスシーンでも生かしていきたいと考えています。
-    </p>
+  <!-- ヒーロー -->
+  <section id="hero" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">大切な想いと共に、<br>生きる</h1>
+        <div class="hero-buttons">
+          <a href="#service" class="btn btn-primary">サービスについて</a>
+          <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="serendipity-gallery">
-        <figure class="serendipity-item">
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About</h2>
+        <p>事業概要</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <h3>私たちの想い</h3>
+          <p>
+            私たちは、人生の喜びや悲しみ、そのすべてが織りなす「彩り」を大切にしています。この「彩り」とは、目に見える色彩だけでなく、心で感じる温かな光を意味しています。私たちは、この心の光を宝石に宿し、お客様が<strong>「彩りとともに生きる力」</strong>を感じていただけるよう願い、事業を行っています
+          </p>
+        </div>
+
+        <div class="company-info">
+          <div class="info-item">
+            <h4>会社名</h4>
+            <p>株式会社Serendipity-Works</p>
+          </div>
+          <div class="info-item">
+            <h4>代表者</h4>
+            <p>代表取締役 小川 加恵子</p>
+          </div>
+          <div class="info-item">
+            <h4>所在地</h4>
+            <p>〒140−0013<br>東京都品川区南大井3−28−10<br>オリエントビル3階</p>
+          </div>
+          <div class="info-item">
+            <h4>設立</h4>
+            <p>2018年8月10日</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 追加：セレンディピティ（中央揃え・モダン・横並び） -->
+      <div class="about-serendipity">
+        <h3>セレンディピティ（Serendipity）とは</h3>
+        <p class="about-serendipity__lead">
+          セレンディピティとは、予期せぬ偶然から幸運な発見をすること。ペニシリンしかり、万有引力しかり、ポテトチップスしかり——単なる偶然に留めず、その偶然をビジネスシーンでも生かしていきたいと考えています。
+        </p>
+
+        <div class="serendipity-gallery">
+          <figure class="serendipity-item">
             <img src="https://charm-labo.com/wp-content/uploads/2025/08/240_F_220707743_3M1RF2vftfIKy5JAHfgFMd3KV2pekhWe.jpg" alt="ペニシリン" loading="lazy" decoding="async" />
             <figcaption>ペニシリン</figcaption>
-        </figure>
-        <figure class="serendipity-item">
+          </figure>
+          <figure class="serendipity-item">
             <img src="https://charm-labo.com/wp-content/uploads/2025/08/240_F_162311751_TyeN9eB5dSZNxWpz3dlSrxoIWaFIJt7c.jpg" alt="ニュートンの万有引力" loading="lazy" decoding="async" />
             <figcaption>ニュートンの万有引力</figcaption>
-        </figure>
-        <figure class="serendipity-item">
+          </figure>
+          <figure class="serendipity-item">
             <img src="https://charm-labo.com/wp-content/uploads/2025/08/240_F_1495044332_r3UzmMBgBWugcmhmLyBMVRMo6l9lpPgI.jpg" alt="ポテトチップス" loading="lazy" decoding="async" />
             <figcaption>ポテトチップス</figcaption>
-        </figure>
+          </figure>
+        </div>
+      </div>
+      <!-- /追加 -->
     </div>
-</div>
-<!-- /追加 -->
+  </section>
 
+  <!-- Service -->
+  <section id="service" class="service">
+    <div class="container">
+      <div class="section-header">
+        <h2>Service</h2>
+        <p>ジュエリー事業</p>
+      </div>
+
+      <div class="service-content">
+        <div class="service-intro">
+          <h3>ご遺骨からつくる宝石</h3>
+          <p>
+            大切な人との思い出と共に生きる、宝石。Iroatiqueのご遺骨ジュエリーは、愛する人がそばで寄り添う証です。時を超え、あなたの手元で輝き続ける絆の証です。
+          </p>
+        </div>
+
+        <div class="iroatique-intro">
+          <div class="iroatique-content">
+            <div class="iroatique-text">
+              <h3>Iroatique（イロアティーク）</h3>
+              <p>私たちは、人生の喜びや悲しみ、そのすべてが織りなす「彩り」を大切にしています。この「彩り」とは、目に見える色彩だけでなく、心で感じる温かな光を意味しています。</p>
+              <p>Iroatiqueは、ご遺骨から生まれる宝石「リヴナイト」を通じて、愛する人がいつもお客様のそばで優しく寄り添う「絆の証」をお作りします。身につけるたびに愛や感謝、そして永遠のつながりを実感できる存在でありたいと願っています。</p>
+            </div>
+            <div class="iroatique-image">
+              <img src="iroatique-jewel.webp" alt="Iroatique ジュエリー" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section id="philosophy" class="philosophy">
+    <div class="container">
+      <div class="section-header">
+        <h2>Philosophy</h2>
+        <p>企業理念</p>
+      </div>
+
+      <div class="philosophy-content">
+        <div class="philosophy-intro">
+          <h3>『大切な想いと共に、生きる』</h3>
+          <p>私たちは、ご遺骨から生まれる宝石が、愛する人がいつもお客様のそばで優しく寄り添う「絆の証」であると信じています。この宝石が、身につけるたびに愛や感謝、そして永遠のつながりを実感できる存在でありたいと願っており、たとえ姿が見えなくなっても、その温かい想いがお客様の人生に新たな光をもたらすと考えています。</p>
+        </div>
+
+        <div class="philosophy-points">
+          <div class="point-item">
+            <div class="point-number">01</div>
+            <h4>一人ひとりに寄り添う心構え</h4>
+            <p>お客様一人ひとりの想いやご要望を最優先に考え、親身になってサポートします。専門知識を駆使し、的確なアドバイスを提供するだけでなく、温かいホスピタリティでお客様に寄り添います。</p>
+          </div>
+
+          <div class="point-item">
+            <div class="point-number">02</div>
+            <h4>最高品質の素材と技術</h4>
+            <p>厳選された最高品質の素材と、熟練職人の技術を組み合わせることで、美しく長く愛用できるジュエリーを制作します。品質へのこだわりは、お客様への想いの表れです。</p>
+          </div>
+
+          <div class="point-item">
+            <div class="point-number">03</div>
+            <h4>トレンドを押さえたデザイン</h4>
+            <p>ジュエリーの最新トレンドを常に把握し、時代に合った美しいデザインを提供します。伝統的な技法とモダンなデザインを融合させ、永遠に愛されるジュエリーをお作りします。</p>
+          </div>
+
+          <div class="point-item">
+            <div class="point-number">04</div>
+            <h4>清潔で快適なアトリエ</h4>
+            <p>清潔で快適なアトリエ環境を維持し、お客様が安心してジュエリー制作の相談ができる空間を提供しています。お客様目線でのサービス向上を常に追求しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>お問い合わせ</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>オフィス</h3>
+              <p>〒140−0013<br>東京都品川区南大井3−28−10<br>オリエントビル3階</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>電話番号</h3>
+              <p>03-1234-5678</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>メールアドレス</h3>
+              <p>info@serendipity-works.co.jp</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>営業時間</h3>
+              <p>9:00〜17:00（定休日：土日祝日）</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group"><input type="text" id="name" name="name" placeholder="お名前" required /></div>
+          <div class="form-group"><input type="email" id="email" name="email" placeholder="メールアドレス" required /></div>
+          <div class="form-group"><input type="text" id="subject" name="subject" placeholder="件名" required /></div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="ご相談内容やご要望をお聞かせください（ご遺骨からの宝石制作についてもお気軽にご相談ください）" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">お問い合わせを送信</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Serendipity-Works</h3>
+          <p>ご遺骨からつくる宝石で、大切な人との絆を永遠に。一人ひとりに寄り添ったサービスを提供します。</p>
+        </div>
+        <div class="footer-section">
+          <h3>サービス</h3>
+          <ul><li><a href="#service">Iroatique（イロアティーク）</a></li></ul>
+        </div>
+        <div class="footer-section">
+          <h3>会社情報</h3>
+          <ul>
+            <li><a href="#about">会社概要</a></li>
+            <li><a href="#philosophy">企業理念</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>フォロー</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Serendipity-Works. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS（あなたの script.js を使うならこのまま） -->
+  <script src="script.js"></script>
 </body>
 </html>
