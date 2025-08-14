@@ -45,7 +45,10 @@ img { max-width: 100%; height: auto; display: block; }
 =============================== */
 .hero {
   min-height: 100vh; display:flex; align-items:center; position:relative; overflow:hidden; color:#fff;
-  background: linear-gradient(rgba(139,115,85,.55), rgba(139,115,85,.55)), url('hero-bg.webp') center/cover no-repeat;
+  /* ▼ ここを差し替え：新しい背景画像（PC/タブレットは迫力優先でcover） */
+  background:
+    linear-gradient(rgba(139,115,85,.55), rgba(139,115,85,.55)),
+    url('https://charm-labo.com/wp-content/uploads/2025/08/AdobeStock_1579814073.jpeg') center/cover no-repeat;
 }
 .hero::before {
   content:''; position:absolute; inset:0;
@@ -89,7 +92,7 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
 .info-item p { color:#5d4e37; font-weight:300; font-size:.95rem; }
 
 /* ===============================
-   Serendipity (修正版・確実に当てる)
+   Serendipity（About内）
 =============================== */
 .about .about-serendipity {
   margin-top: 3rem;
@@ -100,7 +103,6 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
   text-align: center;
   box-shadow: 0 10px 30px rgba(139,115,85,.08);
 }
-
 .about .about-serendipity h3 {
   font-family:'Playfair Display', serif;
   font-size: 1.9rem;
@@ -109,7 +111,6 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
   letter-spacing: .3px;
   margin-bottom: .75rem;
 }
-
 .about .about-serendipity__lead {
   color:#6b5b47;
   line-height:1.9;
@@ -119,8 +120,6 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
   margin: 0 auto 1.75rem auto;
   letter-spacing: .2px;
 }
-
-/* ここを強化（display:grid を強制） */
 .about .serendipity-gallery {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
@@ -128,10 +127,7 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
   align-items: start;
   justify-items: center;
 }
-
-/* figure のデフォルト余白を排除（スコープ限定） */
 .about .serendipity-item { margin: 0; }
-
 .about .serendipity-item {
   width: 100%;
   max-width: 340px;
@@ -143,19 +139,13 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
   box-shadow: 0 6px 18px rgba(0,0,0,.06);
   transition: transform .25s ease, box-shadow .25s ease;
 }
-
-.about .serendipity-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0,0,0,.09);
-}
-
+.about .serendipity-item:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(0,0,0,.09); }
 .about .serendipity-item img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   display: block;
 }
-
 .about .serendipity-item figcaption {
   padding: .8rem 1rem 1rem;
   color:#5d4e37;
@@ -183,8 +173,7 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
    Philosophy
 =============================== */
 .philosophy { background: linear-gradient(135deg, #f8f6f0 0%, #e8e0d0 50%, #d4c4a8 100%); color:#3d2f1f; }
-.philosophy-intro { text列:center; margin-bottom:4rem; } /* ←誤: text列 ではなく text-align */
-.philosophy-intro { text-align:center; margin-bottom:4rem; } /* 修正 */
+.philosophy-intro { text-align:center; margin-bottom:4rem; }
 .philosophy-intro h3 { font-family:'Playfair Display', serif; font-size:2.2rem; margin-bottom:1.5rem; font-weight:300; letter-spacing:.3px; }
 .philosophy-intro p { font-size:1.1rem; opacity:.9; max-width:700px; margin:0 auto; font-weight:300; line-height:1.7; }
 .philosophy-points { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; }
@@ -259,6 +248,8 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
   .about .serendipity-gallery { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
   .about .serendipity-item img { height: 210px; }
 }
+
+/* ▼ スマホ時：背景を「contain」にして全体が見えるように */
 @media (max-width: 768px) {
   .hamburger { display:flex; }
   .nav-menu {
@@ -266,15 +257,26 @@ section { padding: 5rem 0; scroll-margin-top: 80px; }
     text-align:center; transition:.3s; box-shadow: 0 10px 27px rgba(0,0,0,.05); padding: 2rem 0; z-index: 999;
   }
   .nav-menu.active { left: 0; }
-  .hero-container { padding: 0 20px; }
+
+  .hero {
+    /* 画像を切らずに全体表示 */
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: auto;
+    padding: 80px 0; /* 上下余白で見栄え調整 */
+  }
+  .hero-container { padding: 0 20px; min-height: auto; }
   .hero-content { max-width: 100%; padding: 1.5rem; }
   .hero-title { font-size: 2.2rem; }
+
   .about-content { grid-template-columns:1fr; gap:2rem; }
   .company-info { grid-template-columns:1fr; }
   .iroatique-intro { padding:2rem; margin-bottom:3rem; }
   .iroatique-content { grid-template-columns:1fr; gap:2rem; }
   .about .serendipity-gallery { grid-template-columns: 1fr; }
 }
+
 @media (max-width: 480px) {
   .hero-title { font-size:1.8rem; }
   .section-header h2 { font-size:1.8rem; }
